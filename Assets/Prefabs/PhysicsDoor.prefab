@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7516025225311550688}
   - component: {fileID: 7516025225311550689}
   - component: {fileID: 7516025225311550684}
+  - component: {fileID: 2543583083255983170}
   m_Layer: 0
   m_Name: PhysicsDoor
   m_TagString: Draggable
@@ -148,3 +149,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.9, y: 1}
   m_Direction: 1
+--- !u!114 &2543583083255983170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516025225311550694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c12b90e2f932f440b8b3e035da271c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hinge: {fileID: 7516025225311550689}
