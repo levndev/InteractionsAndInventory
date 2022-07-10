@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7516025225311550689}
   - component: {fileID: 7516025225311550684}
   - component: {fileID: 2543583083255983170}
+  - component: {fileID: 4623224943461059742}
   m_Layer: 0
   m_Name: PhysicsDoor
   m_TagString: Draggable
@@ -162,3 +163,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hinge: {fileID: 7516025225311550689}
+  Locked: 0
+--- !u!114 &4623224943461059742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516025225311550694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a0e681e7d705a4d80a6418cbc3372d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prompt: Lock/Unlock door
+  Interaction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2543583083255983170}
+        m_TargetAssemblyTypeName: DoorController, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

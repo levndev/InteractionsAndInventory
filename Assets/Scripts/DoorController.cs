@@ -38,4 +38,9 @@ public class DoorController : MonoBehaviour
     {
         Hinge.limits = UnlockedLimits;
     }
+
+    public void Toggle()
+    {
+        Locked = !Locked;
+    }
 }
