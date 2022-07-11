@@ -4,12 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+[System.Serializable]
+public class InteractionEvent : UnityEvent<GameObject>
+{
+}
+
 public class Interactive : MonoBehaviour
 {
     public string Prompt;
-    public UnityEvent Interaction;
-    public void Interact()
+    public InteractionEvent Interaction;
+    public ItemMetaData ItemRequired;
+    public void Interact(GameObject sender)
     {
-        Interaction?.Invoke();
+        if (ItemRequired != null)
+        {
+            if (!sender.GetComponent<Inventory>().Contains(ItemRequired.ID))
+            {
+                return;
+            }
+        }
+        Interaction?.Invoke(sender);
     }
 }

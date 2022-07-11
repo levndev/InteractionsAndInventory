@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 954463174930235397}
   - component: {fileID: 954463174930235396}
   - component: {fileID: 7872036832336686213}
+  - component: {fileID: 7876535909522911795}
   - component: {fileID: 3327740889006131625}
+  - component: {fileID: 1024878634249575181}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -141,6 +143,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
+--- !u!114 &7876535909522911795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954463174930235393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102b9a7fb68dac542b24682fde5173a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Max: 100
 --- !u!114 &3327740889006131625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +171,18 @@ MonoBehaviour:
   PullForce: 500
   MoveSpeed: 2.5
   InteractionPrompt: {fileID: 0}
+--- !u!114 &1024878634249575181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954463174930235393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6ef8b7018a95d4cae772551b391108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemPanelPrefab: {fileID: 8748934288564037395, guid: 843198b15362f5448823b9e2da7c53eb, type: 3}
+  ItemContainerPrefab: {fileID: 6330044808903196804, guid: ba1c7187f6296f24e83ba86416b8cb81, type: 3}
+  InventoryPanel: {fileID: 0}

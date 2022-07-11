@@ -10,9 +10,26 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D Body;
     Vector2 InputDelta;
     List<Interactive> InteractiveObjectsInRange = new List<Interactive>();
+    Inventory Inventory;
+    Health Health;
+    public void TestDamage()
+    {
+        Health.TakeDamage(25);
+    }
+
+    private void OnDeath()
+    {
+        Destroy(gameObject);
+    }
+
     void Start()
     {
         Body = GetComponent<Rigidbody2D>();
+        Inventory = GetComponent<Inventory>();
+        Health = GetComponent<Health>();
+        Health.OnDeath += OnDeath;
+        Inventory.Add(Resources.Load<ItemMetaData>("Items/Medkit").CreateItem(2));
+        Inventory.Add(Resources.Load<ItemMetaData>("Items/Pistol").CreateItem(1));
     }
 
     void Update()
@@ -25,7 +42,7 @@ public class PlayerController : MonoBehaviour
             InteractionPrompt.text = $"F - {closest.Prompt}";
             if (Input.GetKeyDown(KeyCode.F))
             {
-                closest.Interact();
+                closest.Interact(gameObject);
             }
         }
         else
